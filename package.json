@@ -1,7 +1,7 @@
 {
   "name": "react-native-dom-webview",
   "version": "0.1.0",
-  "description": "Write React (DOM) code alongside your React Native code and render it directly in WebView",
+  "description": "Write React (DOM) code alongside your React Native code and render it directly in React Native WebView",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -31,6 +31,10 @@
   },
   "keywords": [
     "react-native",
+    "react",
+    "react-dom",
+    "webview",
+    "react-native-webview",
     "ios",
     "android"
   ],
@@ -42,14 +46,14 @@
   },
   "homepage": "https://github.com/robertying/react-native-dom-webview#readme",
   "devDependencies": {
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/config-conventional": "^9.1.2",
     "@react-native-community/bob": "^0.16.2",
     "@react-native-community/eslint-config": "^2.0.0",
     "@release-it/conventional-changelog": "^1.1.4",
     "@types/jest": "^26.0.0",
     "@types/react": "^16.9.19",
-    "@types/react-native": "0.62.13",
-    "commitlint": "^8.3.5",
+    "@types/react-native": "^0.63.8",
+    "commitlint": "^9.1.2",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
@@ -57,8 +61,8 @@
     "jest": "^26.0.1",
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
-    "react": "16.11.0",
-    "react-native": "0.62.2",
+    "react": "^16.11.0",
+    "react-native": "^0.63.2",
     "release-it": "^13.5.8",
     "typescript": "^3.8.3"
   },
@@ -119,7 +123,10 @@
       ]
     }
   },
-  "eslintIgnore": ["node_modules/", "lib/"],
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
   "prettier": {
     "quoteProps": "consistent",
     "singleQuote": true,
@@ -130,6 +137,10 @@
   "@react-native-community/bob": {
     "source": "src",
     "output": "lib",
-    "targets": ["commonjs", "module", "typescript"]
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
   }
 }
