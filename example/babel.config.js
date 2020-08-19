@@ -16,6 +16,8 @@ module.exports = function (api) {
           },
         },
       ],
+      path.join(__dirname, '..', pak.source, '../babel'),
+      'preval',
     ],
   };
 };

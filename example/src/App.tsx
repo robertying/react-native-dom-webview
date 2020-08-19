@@ -1,25 +1,29 @@
-import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import DomWebview from 'react-native-dom-webview';
 
+declare const DOM: any;
+const webApp = DOM('./web/App');
+
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    DomWebview.multiply(3, 7).then(setResult);
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>React Native DOM WebView Example</Text>
+      <DomWebview style={styles.webview} app={webApp} />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  title: {
+    textAlign: 'center',
+    fontSize: 32,
+    fontWeight: 'bold',
+  },
+  webview: {
+    flex: 1,
   },
 });
