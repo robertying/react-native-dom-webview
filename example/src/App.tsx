@@ -3,6 +3,7 @@ import { StyleSheet, Text, SafeAreaView } from 'react-native';
 import DomWebview from 'react-native-dom-webview';
 
 declare const DOM: any;
+// magical comment to force revalidating babel cache: dsafsdfadsa
 const webApp = DOM('./web/App');
 
 export default function App() {
