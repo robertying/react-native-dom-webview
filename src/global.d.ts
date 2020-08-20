@@ -1,5 +1,1 @@
-declare module NodeJS {
-  interface Global {
-    DOM: (module: string) => string;
-  }
-}
+declare function DOM(module: string): string;
