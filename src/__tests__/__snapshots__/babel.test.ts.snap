@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`replaces \`DOM\` with \`preval.require\` 1`] = `"var _interopRequireDefault=require(\\"@babel/runtime/helpers/interopRequireDefault\\");Object.defineProperty(exports,\\"__esModule\\",{value:true});exports.default=MyScreen;var _react=_interopRequireDefault(require(\\"react\\"));var _reactNative=require(\\"react-native\\");var a=\\"123\\";var app=preval.require(\\"<PROJECT_ROOT>/src/client\\",\\"8081\\",\\"web/App\\");var editor=preval.require(\\"<PROJECT_ROOT>/src/client\\",\\"8081\\",\\"Editor\\");var fileList=preval.require(\\"./lib/files\\",3);function MyScreen(){return _react.default.createElement(_reactNative.View,null,_react.default.createElement(_reactNative.Text,null,\\"abc\\"));}"`;
