@@ -16,7 +16,13 @@ module.exports = function (api) {
           },
         },
       ],
-      path.join(__dirname, '..', pak.source, '../babel'),
+      [
+        // for library users, the following should be "react-native-dom-webview/babel"
+        path.join(__dirname, '..', pak.source, '../babel'),
+        {
+          packagerPort: 19001,
+        },
+      ],
       'preval',
     ],
   };

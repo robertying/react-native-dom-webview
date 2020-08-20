@@ -6,7 +6,7 @@ module.exports = (babel) => {
   return {
     name: 'react-native-dom-webview/babel',
     visitor: {
-      CallExpression(path, { file }) {
+      CallExpression(path, { file, opts }) {
         const isDOM = looksLike(path, {
           node: {
             callee: {
@@ -20,13 +20,21 @@ module.exports = (babel) => {
           return;
         }
 
+        const port = opts.packagerPort;
+        if (!port) {
+          throw new Error(
+            "react-native-dom-webview/babel requires the packager's port option `packagerPort` to be set. For common React Native projects, this usually is 8081; for Expo, this usually is 19001."
+          );
+        }
+
         const [source] = path.node.arguments;
-        console.error(source);
+
         path.replaceWith(
           t.callExpression(
             t.memberExpression(t.identifier('preval'), t.identifier('require')),
             [
               t.stringLiteral(p.resolve(__dirname, './client')),
+              t.stringLiteral(port.toString()),
               t.stringLiteral(
                 p.relative(
                   file.opts.root,
