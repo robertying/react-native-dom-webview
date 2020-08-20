@@ -6,16 +6,20 @@ Write React (DOM) code alongside your React Native code and render it directly i
 
 ```sh
 npm install react-native-dom-webview
+
+# or
+
+yarn add react-native-dom-webview
 ```
 
 ## Usage
 
-```js
+```jsx
 import DomWebview from 'react-native-dom-webview';
 
-// ...
+const webApp = DOM('./web/App');
 
-const result = await DomWebview.multiply(3, 7);
+<DomWebview app={webApp} />;
 ```
 
 ## Contributing
