@@ -13,7 +13,6 @@ const DomWebview: React.FC<DomWebviewProps> = ({
 }) => {
   return (
     <WebView
-      {...restProps}
       originWhitelist={['*']}
       source={{
         html: `
@@ -30,6 +29,7 @@ const DomWebview: React.FC<DomWebviewProps> = ({
           </html>
         `,
       }}
+      {...restProps}
     />
   );
 };
