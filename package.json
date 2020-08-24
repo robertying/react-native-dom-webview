@@ -48,6 +48,11 @@
     "url": "https://github.com/robertying/react-native-dom-webview/issues"
   },
   "homepage": "https://github.com/robertying/react-native-dom-webview#readme",
+  "dependencies": {
+    "babel-plugin-preval": "^5.0.0",
+    "do-sync": "^2.2.0",
+    "node-fetch": "^2.6.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
@@ -75,6 +80,7 @@
   },
   "peerDependencies": {
     "react": "*",
+    "react-dom": "*",
     "react-native": "*",
     "react-native-webview": "*"
   },
@@ -153,10 +159,5 @@
       "module",
       "typescript"
     ]
-  },
-  "dependencies": {
-    "babel-plugin-preval": "^5.0.0",
-    "do-sync": "^2.2.0",
-    "node-fetch": "^2.6.0"
   }
 }
