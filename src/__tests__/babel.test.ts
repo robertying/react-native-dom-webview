@@ -1,5 +1,5 @@
 import { transformAsync } from '@babel/core';
-const plugin = require('../babel');
+const plugin = require('../../babel');
 
 const input = `
 import React from "react";
