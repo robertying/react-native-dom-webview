@@ -1,6 +1,6 @@
 {
   "name": "react-native-dom-webview",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Write React (DOM) code alongside your React Native code and render it directly in React Native WebView",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -19,6 +19,7 @@
     "!**/__fixtures__",
     "!**/__mocks__",
     "babel.js",
+    "client.js",
     "global.d.ts"
   ],
   "scripts": {
